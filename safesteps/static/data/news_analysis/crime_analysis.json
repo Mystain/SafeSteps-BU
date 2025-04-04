@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-03-30 23:16:49",
+  "crime_locations": {
+    "kurla west": 4,
+    "kurla east": 0,
+    "kurla station": 3,
+    "bkc": 2,
+    "nehru nagar": 3,
+    "tilak nagar": 0,
+    "chunabhatti": 2,
+    "chembur": 3,
+    "saki naka": 2,
+    "asalpha": 5,
+    "vinoba bhave nagar": 0,
+    "lbs marg": 1,
+    "kamani": 4,
+    "premier colony": 4,
+    "kalina": 0,
+    "santacruz east": 5,
+    "vidyavihar": 5,
+    "lokmanya tilak terminus": 5,
+    "sion": 2,
+    "jarimari": 3,
+    "safed pool": 5
+  },
+  "crime_types": {
+    "theft": 19,
+    "robbery": 8,
+    "assault": 8,
+    "murder": 11,
+    "other": 14
+  },
+  "total_articles_analyzed": 77,
+  "crime_related_articles": 29
+}

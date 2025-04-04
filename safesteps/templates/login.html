@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Entry.css') }}">
+  </head>
+  <body>
+    <div id="login-container">
+      <h1 id="login-title">Login to your account</h1>
+      <form id="login-form" action="{{ url_for('auth.login') }}" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <button id="login-button" type="submit">Login</button>
+
+        <!-- Sign-up link below the Login button -->
+        <p id="signup-text">
+          Don't have an account? <a id="signup-link" href="{{ url_for('auth.register') }}">Sign up</a>
+        </p>
+        
+        <!-- Display flashed messages -->
+        {% with messages = get_flashed_messages(with_categories=True) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <p class="flash-message {{ category }}">{{ message }}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </form>
+    </div>
+  </body>
+</html>
